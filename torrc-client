@@ -1,0 +1,18 @@
+# Client Configuration: torrc-client
+# This runs a Tor client that connects through your PT.
+
+# --- Networking ---
+SocksPort 9100
+
+# --- Pluggable Transport Settings ---
+ClientTransportPlugin netshaper exec ./netshaper-client managed
+
+# --- Bridge Settings ---
+UseBridges 1
+# This is the "address" of your private bridge.
+# CHANGED to a high port number (> 1024)
+Bridge netshaper 127.0.0.1:24433 467B74C6DC5B8BB2F6E888624091D0748189EBBA
+
+# --- Data and Logging ---
+DataDirectory ./tor-client-data
+Log debug file ./tor-client-log.txt

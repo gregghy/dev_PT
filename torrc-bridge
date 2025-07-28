@@ -1,0 +1,19 @@
+# Bridge Configuration: torrc-bridge
+# This runs a Tor relay in private bridge mode.
+
+# --- Networking ---
+ORPort 9001
+ExtORPort auto
+BridgeRelay 1
+
+# --- Pluggable Transport Settings ---
+# This MUST be the absolute path to the compiled 'netshaper-server' executable.
+ServerTransportPlugin netshaper exec ./netshaper-bridge -cert-path ./
+
+# The address your PT server will listen on for QUIC connections.
+# CHANGED to a high port number (> 1024)
+ServerTransportListenAddr netshaper 127.0.0.1:24433
+
+# --- Data and Logging ---
+DataDirectory ./tor-bridge-data
+Log notice file ./tor-bridge-log.txt
