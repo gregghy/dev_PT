@@ -1,0 +1,11 @@
+{
+  "appName": "minesVPNPeer2",
+  "shapedServer": {
+    "serverCert": "server.cert",
+    "serverKey": "server.key",
+    "listeningPort": 50000
+  },
+  "unshapedClient": {
+     "serverAddr": "127.0.0.1:7777"
+  }
+}

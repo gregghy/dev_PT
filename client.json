@@ -1,0 +1,11 @@
+{
+  "appName": "minesVPNPeer1",
+  "shapedClient": {
+    "peer2Addr": "127.0.0.1",
+    "peer2Port": 50000
+  },
+  "unshapedServer": {
+    "bindPort": 9999,
+    "serverAddr": "127.0.0.1:7777"
+  }
+}
