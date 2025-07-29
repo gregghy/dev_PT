@@ -6,6 +6,6 @@
   },
   "unshapedServer": {
     "bindPort": 9999,
-    "serverAddr": "127.0.0.1:7777"
+    "serverAddr": "127.0.0.1:24433"
   }
 }
